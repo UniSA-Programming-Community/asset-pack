@@ -38,6 +38,21 @@ the following requirements are applied as well:
 - The shortest side of the image must be no bigger than 256 pixels, 512 pixels for the hDPI version.
 - The maximum pixel size for the shortest side of the images is, of course, preferred.
 
+## Inner workings
+
+A domain folder can contain four files primary files:
+
+- `icon.png`: A square avatar-like icon, representing the brand or product.
+- `logo.png`: The logo of the brand or product 
+- `icon@2x.png`: hDPI version of `icon.png`
+- `logo@2x.png`: hDPI version of `logo.png`
+
+These assets are served in the following format:
+
+- `https://unisa-programming-community.netlify.app/[domain]/icon.png`
+- `https://unisa-programming-community.netlify.app/[domain]/logo.png`
+- `https://unisa-programming-community.netlify.app/[domain]/icon@2x.png`
+- `https://unisa-programming-community.netlify.app/[domain]/logo@2x.png`
 
 ## Tips, Tools & Resources
 
