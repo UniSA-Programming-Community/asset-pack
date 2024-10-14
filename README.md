@@ -2,6 +2,8 @@
 
 All assets retaining to the UniSA Programming Community
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6299ae41-7a75-49b7-b7f5-023448210253/deploy-status)](https://app.netlify.com/sites/unisa-programming-community/deploys)
+
 ## Image specification
 
 All images must have the following requirements:
