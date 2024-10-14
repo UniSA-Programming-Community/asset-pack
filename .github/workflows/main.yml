@@ -1,0 +1,29 @@
+name: Validate Images on Pull Request
+
+on:
+  pull_request:
+    paths:
+      - '**/*.png'  
+
+jobs:
+  validate_images:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  
+
+      - name: Install sharp library
+        run: npm install sharp
+
+      - name: Validate images
+        run: node .github/scripts/validate-images.js
+
+      - name: Output results
+        if: failure() 
+        run: echo "Image validation failed."
